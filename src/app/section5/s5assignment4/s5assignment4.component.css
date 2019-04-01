@@ -1,0 +1,8 @@
+.glyphicon{
+    font-size: 50px;
+    color: #fff;
+    cursor: pointer;
+}
+.highlighted{
+    color: deeppink;
+}

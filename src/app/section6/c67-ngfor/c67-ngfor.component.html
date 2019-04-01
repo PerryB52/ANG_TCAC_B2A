@@ -1,0 +1,19 @@
+<h3><b>s6 c67-69 ngFor, ngFor and change detection, ng for and track by </b></h3>
+
+<button (click)="onAdd()">Add</button>
+
+<ul>
+  <li *ngFor="let course of courses; even as isEven">
+    {{i}} - {{ course.name }} <span *ngIf="isEven">(EVEN)</span>
+    <button (click)="onRemove(course)">Remove</button>
+  </li>
+</ul>
+
+
+<ul>
+  <li *ngFor="let course of courses; trackBy: trackCourse">
+    {{i}} - {{ course.name }} <span *ngIf="isEven">(EVEN)</span>
+    <button (click)="onRemove(course)">Remove</button>
+  </li>
+</ul>
+

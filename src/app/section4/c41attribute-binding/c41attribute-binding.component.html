@@ -1,0 +1,14 @@
+<h3><b>s4 c41 Atribute Binding</b></h3>
+<img [src]="imageUrl" /> 
+<p>check html template code for more details</p>   
+<table>
+    <tr>
+        <!-- correct -->
+        <td [attr.colspan]="colSpan"></td>
+
+        <!-- wrong -->
+        <!-- 
+            <td [colspan]="colSpan"></td> 
+        -->
+    </tr>
+</table>

@@ -1,0 +1,7 @@
+<h3><b>s4 c48 Two-Way Binding</b></h3>
+
+<!-- achieving two way binding with property binding -->
+<!-- <input [value]="email" (keyup.enter)=" email = $event.target.value; onKeyUp()"/> -->
+
+<!-- using property binding syntax -->
+<input [(ngModel)]="email" (keyup.enter)="onKeyUp()"/>

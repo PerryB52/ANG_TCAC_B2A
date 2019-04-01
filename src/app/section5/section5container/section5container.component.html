@@ -1,0 +1,17 @@
+<div id="container-wrapper">
+  <app-c53favorite [is-favorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></app-c53favorite>
+  <app-c61panel>
+    <ng-container class="heading">Heading</ng-container>
+    <div class="body">
+      <h2>Body</h2>
+      <p>Some content</p>
+    </div>
+  </app-c61panel>
+
+  <app-s5assignment4
+    [isActive]="tweet.isLiked"
+    [likesCount]="tweet.likesCount"
+    (click)="onClickChanged($event)"
+    ></app-s5assignment4>
+
+</div>

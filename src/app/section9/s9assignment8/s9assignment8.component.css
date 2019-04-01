@@ -1,0 +1,19 @@
+#wrapper{
+    width: 300px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+#first{
+    width: 100px;
+    border: 1px solid green;
+    float: left;
+}
+#second{
+    border: 1px solid red;
+    float: left;
+}
+
+#followerList{
+    list-style-type: none
+}

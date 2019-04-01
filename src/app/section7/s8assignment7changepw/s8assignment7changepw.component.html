@@ -1,0 +1,37 @@
+<h3><b>s8 assignment 7 change password</b></h3>
+<form [formGroup]="form">
+    
+    <label for="oldpassword">Old password</label>
+    <input
+        formControlName="oldpassword"
+        id="oldpassword"
+        type="text"
+        class="form-control">
+    <div *ngIf="oldpassword.pending">Checking old password...</div>
+    <div *ngIf="oldpassword.touched && oldpassword.invalid" class="alert alert-danger">
+        <div *ngIf="oldpassword.errors.required">Old password is required.</div>
+        <div *ngIf="oldpassword.errors.checkPassword">Old password is not correct.</div>
+    </div>
+
+    <label for="newpassword">New password</label>
+    <input
+        formControlName="newpassword"
+        id="newpassword"
+        type="text"
+        class="form-control">
+    <div *ngIf="newpassword.touched && newpassword.invalid" class="alert alert-danger">
+        <div *ngIf="newpassword.errors.required">New password is required.</div>
+    </div>
+            
+
+    <label for="confpassword">Confirm password</label>
+    <input
+        formControlName="confpassword"
+        id="confpassword"
+        type="text"
+        class="form-control">
+    <div *ngIf="confpassword.touched && confpassword.invalid" class="alert alert-danger">
+        <div *ngIf="confpassword.errors.required">Confirm password is required.</div>
+        <div *ngIf="confpassword.errors.passwordMismatch">Passwords do not match.</div>
+    </div>
+</form>

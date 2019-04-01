@@ -1,0 +1,134 @@
+<div id="container-wrapper">
+    
+  <p>s15 lesson 211 - Check Boxes</p>
+  <a href="https://stackoverflow.com/questions/35944749/what-is-the-difference-between-parentheses-brackets-and-asterisks-in-angular2"></a>
+  <mat-checkbox
+    #showDetails
+    [value]=""
+    [checked]="isChecked"
+    (change)="onChange($event)"
+    >Show details</mat-checkbox>
+  
+  <div *ngIf="showDetails.checked">Some details... </div>
+
+
+  <p>s15 lesson 212 - Radio buttons</p>
+  <mat-radio-group>
+    <mat-radio-button [value]="1">Male</mat-radio-button>
+    <mat-radio-button [value]="0" [checked]="v212isChecked">Female</mat-radio-button>
+  </mat-radio-group>
+
+  <p>s15 lesson 213 - Dropdown lists</p>
+  <mat-form-field>
+    <mat-label>Favorite colors</mat-label>
+    <mat-select [(ngModel)]="v213FavColor">
+      <mat-option
+        *ngFor="let color of v213colors"
+        [value]="color.id">{{ color.name }}</mat-option>
+    </mat-select>
+</mat-form-field>
+
+  
+  <p>s15 lesson 214 - Input</p>
+  <!-- online documentation is a bit different than tutorial -->
+  <mat-form-field>
+      <input 
+        ngModel
+        name="username"
+        type="text" matInput placeholder="Username">
+      <mat-hint>Type a unique username.</mat-hint>
+      <span matSuffix>@domain.com</span>
+      <span matPrefix>admin.</span>
+      <mat-error>
+        The username field is required.
+      </mat-error>
+  </mat-form-field>
+
+
+
+  <p>s15 lesson 215 - Textarea</p>
+  <mat-form-field>
+    <textarea 
+      matInput 
+      placeholder="Leave a comment" 
+      rows="2"></textarea>
+  </mat-form-field>
+
+  <p>s15 lesson 216 - date picker</p>
+  <mat-form-field>
+    <input
+      (focus)="birthdate.open()"
+      [min]="v216minDate"
+      [max]="v216maxDate"
+      matInput [matDatepicker]="birthdate" placeholder="Choose a date">
+    <mat-datepicker-toggle matSuffix [for]="birthdate"></mat-datepicker-toggle>
+    <mat-datepicker #birthdate touchUi="true"></mat-datepicker>
+  </mat-form-field>
+
+  <p>s15 lesson 217 - icons</p>
+  <mat-icon>add_alert</mat-icon>
+
+  <p>s15 lesson 218 - buttons</p>
+  <button mat-button>Button</button>
+  <button color="primary" mat-raised-button>Primary</button>
+  <button color="accent" mat-raised-button>Accent</button>
+  <button color="warn" mat-raised-button>Warn</button>
+  <button color="primary" mat-fab><mat-icon>check</mat-icon></button>
+
+  <p>s15 lesson 219 - chips</p>
+  <mat-chip-list>
+    <mat-chip selected="true" color="accent">one</mat-chip>
+    <mat-chip>two</mat-chip>
+    <mat-chip 
+      *ngFor="let category of v219categories"
+      (click)="v219selectCategory(category)"
+      [selected]="category.selected"
+    >{{ category.name }}</mat-chip>
+  </mat-chip-list>
+
+
+  
+  
+  
+  <p>s15 lesson 220  - progress spinners</p>
+  <mat-progress-spinner mode="determinate" value="20"></mat-progress-spinner>
+  <!-- related to code in constructor that is commented -->
+  <!-- <mat-progress-spinner mode="determinate" [value]="v220progress"></mat-progress-spinner> -->
+  <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+  <mat-progress-spinner *ngIf="v220isLoading" mode="indeterminate"></mat-progress-spinner>
+
+  
+  <p>s15 lesson 221  - tooltips</p>
+  <span 
+    matTooltip="Here is my tooltip"
+    matTooltipPosition="right">Some text</span>
+  
+  <p>s15 lesson 222  - tabs</p>
+  <mat-tab-group>
+    <mat-tab label="Billing">Content of the billing tab</mat-tab>
+    <mat-tab label="Shipping">Content of the billing tab</mat-tab>
+  </mat-tab-group>
+
+  <p>s15 lesson 223  - Dialog</p>
+  <button 
+    (click)="v223openDialog()"
+    mat-raised-button>Open Dialog</button>
+
+
+  <p>s15 lesson 228  - SASS</p>
+  <h1>Heading 1</h1>
+  <h2>Heading 2</h2>
+
+
+  <p>s15 lesson 229  - custom theme</p>
+  <button color="primary" mat-raised-button>Button1</button>
+  <button color="accent" mat-raised-button>Button2</button>
+
+
+  <p>s15 lesson 230  - angular typography</p>
+  <h1 class="mat-heading-1">heading 1</h1>
+  <p class="mat-body-1">
+    lorem ipsum dolor ist amet, consectetur adipiscing el...
+  </p>
+  
+</div>

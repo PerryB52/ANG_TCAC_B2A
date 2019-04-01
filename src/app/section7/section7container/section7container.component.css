@@ -1,0 +1,8 @@
+#container-wrapper{
+    position: fixed;
+    margin-left: 350px;
+    background: #b5c6e2;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+}

@@ -1,0 +1,13 @@
+<h3><b>s3 c33 Generating components using angular cli - {{title}}</b></h3>
+<p>
+  ng g c folder2/component-name - will generate a new component automatically 
+</p>
+<p>method string interpollation - {{ getTitle() }}</p>
+<p>using directives to display array of courses: </p>
+<ul>
+  <li *ngFor="let course of courses">
+    {{course}}
+  </li>
+</ul>
+<p>using a service + dependency injection to display the list of courses</p>
+<p>cli generate service: ng g s service-name</p>

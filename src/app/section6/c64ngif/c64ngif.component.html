@@ -1,0 +1,18 @@
+
+<h3><b>s6 c64 ngIf and s6 c65 hidden property</b></h3>
+<h3><b>ngIf</b></h3>
+<div *ngIf="courses.length > 0; then coursesList else noCourses"></div>
+<ng-template #coursesList>
+  List of courses
+</ng-template>
+<ng-template #noCourses>
+  Nou courses yet
+</ng-template>
+
+<h3><b>Hidden property</b></h3>
+<div [hidden]="courses.length == 0">
+  List of courses
+</div>
+<div [hidden]="courses.length > 1">
+  No courses yet
+</div>
